@@ -1,0 +1,119 @@
+.hero-social {
+	display: flex;
+}
+
+.hero-container {
+	width: 100%;
+	padding: 0;
+
+	@include tablet {
+		display: flex;
+		width: 720px;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
+	@include desktop {
+		width: 1200px;
+	}
+}
+.hero-content {
+	// max-width: 1600px;
+
+	padding: 208px 15px 183px;
+	flex-grow: 1;
+	background-image: linear-gradient(
+			to right,
+			rgba(47, 48, 58, 0.4),
+			rgba(47, 48, 58, 0.4)
+		),
+		url(../../img/hero_mobile.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+
+	@include retina {
+		background-image: linear-gradient(
+				to right,
+				rgba(47, 48, 58, 0.4),
+				rgba(47, 48, 58, 0.4)
+			),
+			url(../../img/hero_mobile@2x.jpg);
+	}
+	@include mobile {
+		padding: 208px 31px 183px;
+	}
+	@include tablet {
+		// max-width: 1199px;
+
+		background-image: linear-gradient(
+				to right,
+				rgba(47, 48, 58, 0.4),
+				rgba(47, 48, 58, 0.4)
+			),
+			url(../../img/hero_tablet.jpg);
+
+		@include retina {
+			background-image: linear-gradient(
+					to right,
+					rgba(47, 48, 58, 0.4),
+					rgba(47, 48, 58, 0.4)
+				),
+				url(../../img/hero_tablet@2x.jpg);
+		}
+	}
+	@include desktop {
+		// max-width: 1600px;
+		height: 600px;
+		padding: 272px 96px 206px 96px;
+		background-image: linear-gradient(
+				to right,
+				rgba(47, 48, 58, 0.4),
+				rgba(47, 48, 58, 0.4)
+			),
+			url(../../img/hero_desktop.jpg);
+
+		@include retina {
+			background-image: linear-gradient(
+					to right,
+					rgba(47, 48, 58, 0.4),
+					rgba(47, 48, 58, 0.4)
+				),
+				url(../../img/hero-desktop@2x.jpg);
+		}
+	}
+}
+.hero-content__text-top {
+	color: $secondary-content-color;
+	opacity: 60%;
+	margin-bottom: 20px;
+}
+
+.hero-content__title {
+	font-family: Raleway;
+	color: $secondary-title-color;
+	font-size: 40px;
+	line-height: calc(56 / 48);
+	letter-spacing: 0.05em;
+	margin-bottom: 20px;
+	@include mobile {
+		font-size: 48px;
+	}
+	@include desktop {
+		font-size: 72px;
+		line-height: calc(85 / 72);
+	}
+}
+.hero-content__text {
+	width: 305px;
+	font-size: 16px;
+	line-height: calc(26 / 16);
+	color: $secondary-content-color;
+
+	@include desktop {
+		width: 400px;
+		line-height: calc(30 / 18);
+
+		color: $secondary-content-color;
+	}
+}

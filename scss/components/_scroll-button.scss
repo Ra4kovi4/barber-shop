@@ -1,0 +1,25 @@
+.scroll-top {
+	position: fixed;
+	bottom: 100px;
+	right: 5%;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 50px;
+	width: 50px;
+	border-radius: 50%;
+	background-color: $focus-color;
+	animation: scroll-top 1000ms linear infinite alternate;
+}
+.scroll-top__icon {
+	fill: #ffffff;
+}
+@keyframes scroll-top {
+	0% {
+		transform: translateY(-10%);
+	}
+	100% {
+		transform: translateY(10%);
+	}
+}

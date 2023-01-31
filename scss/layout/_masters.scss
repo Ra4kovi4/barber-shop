@@ -1,0 +1,119 @@
+.masters-section {
+	background-color: $secondary-bg-color;
+	@media screen and (max-width: 479px) {
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+	@include mobile {
+		padding-top: 84px;
+		padding-bottom: 84px;
+	}
+	@include desktop {
+		min-width: 1280px;
+		padding-top: 130px;
+		padding-bottom: 130px;
+	}
+}
+.masters-container {
+	@media screen and (min-width: 768px) and (max-width: 1199px) {
+		padding-left: 159px;
+		padding-right: 159px;
+	}
+}
+.masters-container__text-top {
+	margin-bottom: 20px;
+	@media screen and (max-width: 1199px) {
+	}
+}
+.masters-container__title {
+	margin-bottom: 44px;
+}
+
+.masters-list {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	@include desktop {
+		display: flex;
+		flex-direction: row;
+		margin-left: -30px;
+		margin-top: -30px;
+	}
+}
+
+.masters-list__item {
+	width: 100%;
+
+	@media screen and (max-width: 1199px) {
+		&:not(:last-child) {
+			margin-bottom: 64px;
+		}
+	}
+	@include desktop {
+		width: calc(100% / 2 - 30px);
+		margin-left: 30px;
+		margin-top: 30px;
+	}
+}
+.masters-list__photo {
+	margin: 0 auto;
+}
+.masters-content {
+	width: 100%;
+	padding-top: 30px;
+
+	padding-left: 107px;
+	padding-right: 107px;
+	@media screen and (max-width: 479px) {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+	@include tablet {
+		padding-left: 97px;
+		padding-right: 97px;
+	}
+	@include desktop {
+		padding-left: 82px;
+		padding-right: 82px;
+	}
+}
+
+.masters-content__title {
+	margin-bottom: 8px;
+	line-height: 1.38;
+	text-align: center;
+	color: $title-color;
+}
+.masters-content__text {
+	margin-bottom: $margin;
+	font-size: 14px;
+	line-height: 1.35;
+	text-align: center;
+
+	color: $focus-color;
+}
+
+.masters-networks {
+	display: flex;
+	justify-content: center;
+}
+.masters-networks__item:not(:first-child) {
+	margin-left: 10px;
+}
+.masters-networks__link {
+	display: flex;
+	padding: 12px;
+	border-radius: 50%;
+	color: $title-color;
+	background-color: $secondary-title-color;
+	transition: color 300ms linear;
+	&:hover,
+	&:focus {
+		color: $focus-color;
+	}
+}
+
+.masters-networks__icon {
+	fill: currentColor;
+}

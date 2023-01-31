@@ -1,0 +1,10 @@
+.logo {
+	color: #ffffff;
+
+	@include tablet {
+		color: #303030;
+	}
+}
+.logo__icon {
+	fill: currentColor;
+}

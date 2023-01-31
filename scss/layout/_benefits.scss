@@ -1,0 +1,129 @@
+.benefits-section {
+	@media screen and (max-width: 479px) {
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+	@include mobile {
+		padding-top: 84px;
+		padding-bottom: 84px;
+	}
+	@include desktop {
+		padding-top: 143px;
+		padding-bottom: 137px;
+	}
+}
+
+.benefits-container {
+	display: flex;
+	flex-direction: column-reverse;
+	@include desktop {
+		flex-direction: row;
+	}
+}
+.benefits-list {
+	display: flex;
+	flex-wrap: wrap;
+
+	width: 310px;
+
+	@include mobile {
+		width: 416px;
+	}
+	@include tablet {
+		width: 450px;
+		margin-left: auto;
+	}
+	@include desktop {
+		width: 370px;
+		margin-right: 130px;
+	}
+}
+
+.benefits-list__item {
+	background-color: $secondary-bg-color;
+	padding: 20px;
+
+	height: 133px;
+	width: 140px;
+	@include mobile {
+		width: 190px;
+		padding-right: 36px;
+		padding-left: 36px;
+	}
+	@include tablet {
+		width: 210px;
+		padding-right: 44px;
+		padding-left: 44px;
+	}
+	@include desktop {
+		width: 170px;
+		padding-right: 24px;
+		padding-left: 24px;
+	}
+}
+.benefits-list__item:nth-child(odd) {
+	margin-right: $margin;
+	@media screen and (max-width: 479px) {
+		margin-right: 20px;
+	}
+}
+.benefits-list__item:nth-child(even) {
+	margin-top: $margin;
+	@media screen and (max-width: 479px) {
+		margin-top: 20px;
+	}
+}
+.benefits-list__part {
+	position: relative;
+	display: block;
+	font-weight: 700;
+	font-size: 42px;
+	line-height: 1.35;
+	text-align: center;
+	letter-spacing: 0.05em;
+
+	color: $title-color;
+}
+.benefits-list__part::after {
+	content: "+";
+	position: absolute;
+	top: 7px;
+	width: 13px;
+	height: 22px;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 1.38;
+
+	color: $focus-color;
+}
+.benefits-list__text {
+	font-weight: 600;
+	font-size: 11px;
+	line-height: 1.36;
+	text-align: center;
+
+	color: $title-color;
+}
+.benefits-content__text-top {
+	margin-bottom: 20px;
+}
+.benefits-content__title {
+	margin-bottom: 20px;
+	width: 418px;
+	@media screen and (max-width: 479px) {
+		width: 250px;
+	}
+}
+
+.benefits-content__bottom-text {
+	@media screen and (max-width: 479px) {
+		font-size: 16px;
+	}
+	@include tablet {
+		width: 500px;
+	}
+
+	@media screen and (max-width: 1199px) {
+		margin-bottom: 44px;
+	}
+}

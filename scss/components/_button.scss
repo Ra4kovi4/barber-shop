@@ -1,0 +1,33 @@
+/* Кнопка */
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 160px;
+  padding: 11px 20px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.09em;
+
+  text-transform: uppercase;
+  border: 1px solid $focus-color;
+  border-radius: 25px;
+  background-color: transparent;
+  transition: background-color 300ms linear, color 300ms linear;
+  &:hover,
+  &:focus {
+    background-color: $focus-color;
+    color: $primary-bg-color;
+    cursor: pointer;
+  }
+}
+
+.button--dark {
+  color: $title-color;
+}
+.button--light {
+  color: $secondary-title-color;
+}

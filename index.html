@@ -1,668 +1,936 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BarberShop</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./css/style.css" />
-  </head>
-  <body>
-    <!-- Шапка сайта -->
-    <header class="header">
-      <div class="container nav">
-        <nav class="main-nav">
-          <svg width="66" height="56" class="logo-icon">
-            <use href="./img/sprite.svg#logo"></use>
-          </svg>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>BarberShop</title>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Raleway:wght@700&display=swap"
+			rel="stylesheet" />
+		<link rel="stylesheet" href="./css/main.min.css" />
+	</head>
+	<body id="scrollbar">
+		<!-- Header -->
+		<header class="header">
+			<div class="nav container">
+				<a href="" class="logo">
+					<svg class="logo__icon" width="66" height="56" class="logo-icon">
+						<use href="./img/sprite.svg#logo"></use>
+					</svg>
+				</a>
 
-          <ul class="nav-list list">
-            <li class="item"><a class="link" href="#about">О нас</a></li>
-            <li class="item">
-              <a class="link" href="#price">Услуги и цены</a>
-            </li>
-            <li class="item"><a class="link" href="#masters">Мастера</a></li>
-            <li class="item"><a class="link" href="#contacts">Контакты</a></li>
-          </ul>
-        </nav>
-        <div class="reg">
-          <a class="reg-link" href="tel:+380441111111">+38 044 111 11 11</a>
-          <button type="button" class="nav-button btn" data-modal-open>
-            онлайн-запись
-          </button>
-        </div>
-      </div>
-    </header>
-    <main>
-      <!-- Соцсети -->
-      <section class="hero" id="hero">
-        <div class="container">
-          <div class="hero-soc">
-            <ul class="hero-list list">
-              <li class="hero-item">
-                <a
-                  class="hero-link"
-                  href=""
-                  target="_blank"
-                  rel="noopener nofollow noreferrer"
-                  aria-label="Cсылка на Youtube"
-                  >Youtube</a
-                >
-              </li>
-              <li class="hero-item">
-                <a
-                  class="hero-link"
-                  href=""
-                  target="_blank"
-                  rel="noopener nofollow noreferrer"
-                  aria-label="Cсылка на Instagram"
-                  >Instagram</a
-                >
-              </li>
-            </ul>
-          </div>
+				<nav class="nav-menu">
+					<ul class="nav-list list">
+						<li class="nav-list__item">
+							<a class="nav-list__link" href="#about">About</a>
+						</li>
+						<li class="nav-list__item">
+							<a class="nav-list__link" href="#price">Services and prices</a>
+						</li>
+						<li class="nav-list__item">
+							<a class="nav-list__link" href="#masters">Barbers</a>
+						</li>
+						<li class="nav-list__item">
+							<a class="nav-list__link" href="#contacts">Contacts</a>
+						</li>
+					</ul>
+				</nav>
+				<div class="registration">
+					<a class="registration__link" href="tel:+380441111111"
+						>+38 044 111 11 11</a
+					>
+					<button
+						class="button hero-button button--light"
+						type="button"
+						data-modal-open>
+						book online
+					</button>
+				</div>
+				<button class="menu-button js-open-menu">
+					<svg class="menu-button__icon" width="40" height="40">
+						<use href="./img/sprite.svg#menu"></use>
+					</svg>
+				</button>
+			</div>
+			<!-- Mobile menu -->
+			<div class="mobile-menu js-menu-container">
+				<button class="menu-button js-close-menu">
+					<svg class="menu-button__icon icon-close" width="40" height="40">
+						<use href="./img/sprite.svg#close"></use>
+					</svg>
+				</button>
+				<nav class="mobile-menu-nav">
+					<ul class="nav-list list">
+						<li class="nav-list__item">
+							<a class="nav-list__link" href="#about">About</a>
+						</li>
+						<li class="nav-list__item">
+							<a class="nav-list__link" href="#price">Services and prices</a>
+						</li>
+						<li class="nav-list__item">
+							<a class="nav-list__link" href="#masters">Barbers</a>
+						</li>
+						<li class="nav-list__item">
+							<a class="nav-list__link" href="#contacts">Contacts</a>
+						</li>
+					</ul>
+				</nav>
+				<div class="mobile-menu-registration">
+					<a class="mobile-menu-registration__link" href="tel:+380441111111"
+						>+38 044 111 11 11</a
+					>
 
-          <!-- Представление -->
-          <div class="hero-content">
-            <p lang="en" class="hero-text-top text-top">
-              A hair salon for men in Kyiv
-            </p>
-            <h1 class="hero-title">BarberShop</h1>
-            <p class="hero-text">
-              Мы эксперты в модных мужских стрижках. Работаем быстро, осторожно
-              и со вкусом.
-            </p>
-          </div>
-        </div>
-      </section>
-      <!-- О нас -->
-      <section class="section-about" id="about">
-        <div class="container barber">
-          <ul class="about-list list">
-            <li class="about-item">
-              <img
-                class="about-img"
-                src="./img/img-1.jpg"
-                alt="барьер стрижет бороду"
-                width="270"
-              />
-            </li>
-            <li class="about-item">
-              <img
-                class="about-img"
-                src="./img/img-2.jpg"
-                alt="барбер бреет виски"
-                width="270"
-              />
-            </li>
-          </ul>
-          <div class="about">
-            <p class="about-text-top text-top">О НАС</p>
-            <h2 class="about-title">Лучший Барбершоп твоего города</h2>
-            <p class="about-text-first">
-              Если ты хочешь добавить в свой образ больше уверенности – тебе
-              точно к нам.
-            </p>
-            <p class="about-text-secondary">
-              Мы команда, которая никогда не останавливается на достигнутом и
-              жаждет перемен. И когда ты попадешь в руки нашего мастера, то уже
-              никогда не сможешь быть прежним. Мы команда, которая всегда с
-              клиентами "на одной волне". Поэтому, мы всегда готовы
-              усовершенствовать каждого, кто к нам приходит!
-            </p>
-            <button type="button" class="about-button btn" data-modal-open>
-              онлайн-запись
-            </button>
-          </div>
-        </div>
-      </section>
-      <!-- Прайс -->
-      <section class="section price" id="price">
-        <div class="container">
-          <p class="price-text-top text-top">
-            Проведи время в компании лучших мастеров
-          </p>
-          <h2 class="price-title">Услуги и цены</h2>
-          <div class="price-container">
-            <ul class="price-list list left">
-              <li class="price-item">
-                <p class="price-item-text">Мужская стрижка</p>
-                <p class="price-item-text">от 300 грн.</p>
-              </li>
-              <li class="price-item">
-                <p class="price-item-text">Стрижка бороды</p>
-                <p class="price-item-text">от 200 грн.</p>
-              </li>
-              <li class="price-item">
-                <p class="price-item-text">Стрижка усов</p>
-                <p class="price-item-text">от 200 грн.</p>
-              </li>
-              <li class="price-item">
-                <p class="price-item-text">Бритье опасной бритвой</p>
-                <p class="price-item-text">от 200 грн.</p>
-              </li>
-            </ul>
-            <ul class="price-list list right">
-              <li class="price-item">
-                <p class="price-item-text">Cтрижка у стажера</p>
-                <p class="price-item-text">от 50 грн.</p>
-              </li>
-              <li class="price-item">
-                <p class="price-item-text">Стрижка под насадку</p>
-                <p class="price-item-text">от 200 грн.</p>
-              </li>
-              <li class="price-item">
-                <p class="price-item-text">Детская стрижка (до 12 лет)</p>
-                <p class="price-item-text">от 300 грн.</p>
-              </li>
-              <li class="price-item">
-                <p class="price-item-text">Камуфлирование седины</p>
-                <p class="price-item-text">от 200 грн.</p>
-              </li>
-            </ul>
-          </div>
-          <button type="button" class="price-button btn" data-modal-open>
-            онлайн-запись
-          </button>
-        </div>
-      </section>
-      <!-- Преимущества -->
-      <section class="section benefits">
-        <div class="container">
-          <ul class="benefits-list list">
-            <li class="benefits-item">
-              <span class="benefits-item-part">600</span>
-              <p class="benefits-item-text">Довольных клиентов в день</p>
-            </li>
-            <li class="benefits-item">
-              <span class="benefits-item-part">50</span>
-              <p class="benefits-item-text">Наград за отличный сервис</p>
-            </li>
-            <li class="benefits-item">
-              <span class="benefits-item-part">20</span>
-              <p class="benefits-item-text">Лучших мастеров Киева</p>
-            </li>
-            <li class="benefits-item">
-              <span class="benefits-item-part">100</span>
-              <p class="benefits-item-text">Подарков постоянным клиентам</p>
-            </li>
-          </ul>
-          <div class="benefits-content">
-            <p class="benefits-text-top text-top">старая традиционная школа</p>
-            <h2 class="benefits-title">Почему приходят именно к нам?</h2>
-            <p class="benefits-text">
-              О нас говорят только хорошее. Но лучше 1 раз увидеть и
-              прочувствовать, чем 10 раз прочитать.
-            </p>
-          </div>
-        </div>
-      </section>
-      <!-- Команда -->
-      <section class="section masters" id="masters">
-        <div class="container">
-          <p class="masters-text-top text-top">
-            для настоящих ценителей атмосферы
-          </p>
-          <h2 class="masters-title">Наши мастера</h2>
-          <ul class="masters-list list">
-            <li class="masters-item">
-              <img
-                class="masters-photo"
-                src="./img/img-11.jpg"
-                alt="Джони"
-                width="370"
-              />
-              <div class="masters-content">
-                <h3 class="masters-item-title">John Smith</h3>
-                <p class="masters-item-text">Extreme Barber</p>
-                <ul class="masters-social-list list">
-                  <li class="masters-social-item">
-                    <a
-                      href=""
-                      class="masters-social-link"
-                      target="_blank"
-                      rel="noopener nofollow noreferrer"
-                      aria-label="Cсылка на Instagram"
-                    >
-                      <svg width="20" height="20" class="masters-social-icon">
-                        <use href="./img/sprite.svg#instagram"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="masters-social-item">
-                    <a
-                      href=""
-                      class="masters-social-link"
-                      target="_blank"
-                      rel="noopener nofollow noreferrer"
-                      aria-label="Cсылка на Twitter"
-                    >
-                      <svg width="20" height="20" class="masters-social-icon">
-                        <use href="./img/sprite.svg#twitter"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="masters-social-item">
-                    <a
-                      href=""
-                      class="masters-social-link"
-                      target="_blank"
-                      rel="noopener nofollow noreferrer"
-                      aria-label="Cсылка на Facebook"
-                    >
-                      <svg width="20" height="20" class="masters-social-icon">
-                        <use href="./img/sprite.svg#facebook"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="masters-social-item">
-                    <a
-                      href=""
-                      class="masters-social-link"
-                      target="_blank"
-                      rel="noopener nofollow noreferrer"
-                      aria-label="Cсылка на linkedin"
-                    >
-                      <svg width="20" height="20" class="masters-social-icon">
-                        <use href="./img/sprite.svg#linkedin"></use>
-                      </svg>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="masters-item">
-              <img
-                class="masters-photo"
-                src="./img/img-21.jpg"
-                alt="Майкл"
-                width="370"
-              />
-              <div class="masters-content">
-                <h3 class="masters-item-title">Michele Doe</h3>
-                <p class="masters-item-text">Extreme Barber</p>
-                <ul class="masters-social-list list">
-                  <li class="masters-social-item">
-                    <a
-                      href=""
-                      class="masters-social-link"
-                      target="_blank"
-                      rel="noopener nofollow noreferrer"
-                      aria-label="Cсылка на Instagram"
-                    >
-                      <svg width="20" height="20" class="masters-social-icon">
-                        <use href="./img/sprite.svg#instagram"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="masters-social-item">
-                    <a
-                      href=""
-                      class="masters-social-link"
-                      target="_blank"
-                      rel="noopener nofollow noreferrer"
-                      aria-label="Cсылка на Twitter"
-                    >
-                      <svg width="20" height="20" class="masters-social-icon">
-                        <use href="./img/sprite.svg#twitter"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="masters-social-item">
-                    <a
-                      href=""
-                      class="masters-social-link"
-                      target="_blank"
-                      rel="noopener nofollow noreferrer"
-                      aria-label="Cсылка на Facebook"
-                    >
-                      <svg width="20" height="20" class="masters-social-icon">
-                        <use href="./img/sprite.svg#facebook"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="masters-social-item">
-                    <a
-                      href=""
-                      class="masters-social-link"
-                      target="_blank"
-                      rel="noopener nofollow noreferrer"
-                      aria-label="Cсылка на linkedin"
-                    >
-                      <svg width="20" height="20" class="masters-social-icon">
-                        <use href="./img/sprite.svg#linkedin"></use>
-                      </svg>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="masters-item">
-              <img
-                class="masters-photo"
-                src="./img/img-31.jpg"
-                alt="Алан"
-                width="370"
-              />
-              <div class="masters-content">
-                <h3 class="masters-item-title">Alan Black</h3>
-                <p class="masters-item-text">Extreme Barber</p>
-                <ul class="masters-social-list list">
-                  <li class="masters-social-item">
-                    <a
-                      href=""
-                      class="masters-social-link"
-                      target="_blank"
-                      rel="noopener nofollow noreferrer"
-                      aria-label="Cсылка на Instagram"
-                    >
-                      <svg width="20" height="20" class="masters-social-icon">
-                        <use href="./img/sprite.svg#instagram"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="masters-social-item">
-                    <a
-                      href=""
-                      class="masters-social-link"
-                      target="_blank"
-                      rel="noopener nofollow noreferrer"
-                      aria-label="Cсылка на Twitter"
-                    >
-                      <svg width="20" height="20" class="masters-social-icon">
-                        <use href="./img/sprite.svg#twitter"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="masters-social-item">
-                    <a
-                      href=""
-                      class="masters-social-link"
-                      target="_blank"
-                      rel="noopener nofollow noreferrer"
-                      aria-label="Cсылка на Facebook"
-                    >
-                      <svg width="20" height="20" class="masters-social-icon">
-                        <use href="./img/sprite.svg#facebook"></use>
-                      </svg>
-                    </a>
-                  </li>
-                  <li class="masters-social-item">
-                    <a
-                      href=""
-                      class="masters-social-link"
-                      target="_blank"
-                      rel="noopener nofollow noreferrer"
-                      aria-label="Cсылка на linkedin"
-                    >
-                      <svg width="20" height="20" class="masters-social-icon">
-                        <use href="./img/sprite.svg#linkedin"></use>
-                      </svg>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </section>
-      <!-- Работы -->
-      <section class="section works">
-        <div class="container">
-          <h2 class="visually-hidden">наша работа</h2>
-          <p class="works-text text-top">
-            На латинском языке “барба” означает “борода”
-          </p>
-          <ul class="works-list list">
-            <li class="works-item">
-              <img
-                class="works-photo"
-                src="./img/img-25.jpg"
-                alt="барбер стрижет"
-                width="270"
-              />
-            </li>
-            <li class="works-item">
-              <img
-                class="works-photo"
-                src="./img/img-26.jpg"
-                alt="барбер бреет"
-                width="270"
-              />
-            </li>
-            <li class="works-item">
-              <img
-                class="works-photo"
-                src="./img/img-27.jpg"
-                alt="барбер отпаривает"
-                width="270"
-              />
-            </li>
-            <li class="works-item">
-              <img
-                class="works-photo"
-                src="./img/img-28.jpg"
-                alt="барбер подбривает"
-                width="270"
-              />
-            </li>
-          </ul>
-        </div>
-      </section>
-      <!-- Форма записи -->
-      <div class="online-wrap">
-        <div class="container">
-          <section class="section online">
-            <h2 class="online-title">Онлайн-запись</h2>
-            <form class="online-content" autocomplete="off">
-              <div class="online-field">
-                <label class="online-label">
-                  <input
-                    class="online-input"
-                    type="text"
-                    name="name"
-                    placeholder=" "
-                    required
-                  />
-                  <span class="online-text">Имя*</span>
-                </label>
-              </div>
-              <div class="online-field">
-                <label class="online-label">
-                  <input
-                    class="online-input"
-                    type="tel"
-                    name="tel"
-                    placeholder=" "
-                    required
-                  />
-                  <span class="online-text">Телефон*</span>
-                </label>
-              </div>
-              <div class="text-field">
-                <label class="text-label">
-                  <textarea
-                    class="text-input"
-                    name="message"
-                    placeholder=" "
-                  ></textarea>
-                  <span class="online-text">сообщение</span>
-                </label>
-              </div>
-            </form>
-            <button type="submit" class="online-button btn">отправить</button>
-          </section>
-          <!-- Контакты -->
-          <section class="section contacts" id="contacts">
-            <h2 class="contacts-title">Контакты</h2>
-            <address class="contacts-adress">
-              <ul class="contacts-list list">
-                <li class="contacts-item">
-                  <a
-                    class="contacts-link map"
-                    href="https://goo.gl/maps/7j71h9MgPoRKZNbf8"
-                  >
-                    <svg width="24" height="24" class="contacts-icon">
-                      <use href="./img/sprite.svg#map-pin"></use>
-                    </svg>
-                    ул. Васильковая, 7А <br />
-                    Киев, 08132</a
-                  >
-                </li>
-                <li class="contacts-item">
-                  <a class="contacts-link tel" href="tel:+380441111111">
-                    <svg width="24" height="24" class="contacts-icon">
-                      <use href="./img/sprite.svg#phone"></use>
-                    </svg>
-                    +38 044 111 11 11
-                  </a>
-                </li>
-                <li class="contacts-item">
-                  <a
-                    class="contacts-link mail"
-                    href="mailto:barbershop@email.com"
-                  >
-                    <svg width="24" height="24" class="contacts-icon">
-                      <use href="./img/sprite.svg#mail"></use>
-                    </svg>
-                    barbershop@email.com
-                  </a>
-                </li>
-              </ul>
-              <p class="contacts-subtitle text-top">время работы</p>
-              <p class="contacts-time">Ежедневно с 9:00 до 22:00</p>
-            </address>
-          </section>
-        </div>
-      </div>
-    </main>
-    <!-- Подвал -->
-    <footer class="footer">
-      <div class="container">
-        <p class="footer-text">&copy; Copyright 2020</p>
-        <ul class="footer-list list text-top">
-          <li class="footer-item">
-            <a
-              class="footer-link"
-              href=""
-              target="_blank"
-              rel=" noopener nofollow noreferrer"
-              >Instagram</a
-            >
-          </li>
-          <li class="footer-item">
-            <a
-              class="footer-link"
-              href=""
-              target="_blank"
-              rel=" noopener nofollow noreferrer"
-              >Youtube</a
-            >
-          </li>
-        </ul>
-      </div>
-    </footer>
-    <a href="#hero" class="scroll-top"
-      ><svg class="scroll-top-icon" width="30" height="30">
-        <use href="./img/sprite.svg#top"></use></svg
-    ></a>
-    <!-- Модалка -->
-    <div class="backdrop is-hidden" data-modal>
-      <div class="modal">
-        <button class="modal-button" type="button" data-modal-close>
-          <svg class="modal-icon" width="18" height="18">
-            <use href="./img/sprite.svg#close"></use>
-          </svg>
-        </button>
-        <p class="modal-text">Оставьте заявку на услугу</p>
+					<button
+						class="button hero-button button--dark js-modal-open"
+						type="button"
+						data-modal-open>
+						book online
+					</button>
+				</div>
+				<div class="mobile-menu-social-networks">
+					<ul class="mobile-menu-networks list">
+						<li class="mobile-menu-networks__item">
+							<a
+								class="mobile-menu-networks__link"
+								href=""
+								target="_blank"
+								rel="noopener nofollow noreferrer"
+								aria-label="Cсылка на Youtube"
+								>Youtube</a
+							>
+						</li>
+						<li class="mobile-menu-networks__item">
+							<a
+								class="mobile-menu-networks__link"
+								href=""
+								target="_blank"
+								rel="noopener nofollow noreferrer"
+								aria-label="Cсылка на Instagram"
+								>Instagram</a
+							>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</header>
+		<main>
+			<!-- Networks -->
+			<section class="hero" id="hero">
+				<div class="hero-container container">
+					<div class="social-networks">
+						<ul class="networks networks--vertical list">
+							<li class="networks__item">
+								<a
+									class="networks__link"
+									href=""
+									target="_blank"
+									rel="noopener nofollow noreferrer"
+									aria-label="Cсылка на Youtube"
+									>Youtube</a
+								>
+							</li>
+							<li class="networks__item">
+								<a
+									class="networks__link"
+									href=""
+									target="_blank"
+									rel="noopener nofollow noreferrer"
+									aria-label="Cсылка на Instagram"
+									>Instagram</a
+								>
+							</li>
+						</ul>
+					</div>
 
-        <form class="registration" autocomplete="off">
-          <div class="form-field">
-            <label class="registration-label">
-              <span class="label-part">Имя</span>
+					<!-- Hero -->
+					<div class="hero-content">
+						<p lang="en" class="hero-content__text-top text-top">
+							A hair salon for men in Kyiv
+						</p>
+						<h1 class="hero-content__title">BarberShop</h1>
+						<p class="hero-content__text">
+							We are experts in fashionable men's haircuts. We work quickly,
+							carefully and tasteful.
+						</p>
+					</div>
+				</div>
+			</section>
 
-              <input
-                class="registration-input"
-                type="text"
-                name="name"
-                required
-              />
-              <svg class="field-icon" width="18" height="18">
-                <use href="./img/sprite.svg#person"></use>
-              </svg>
-            </label>
-          </div>
-          <div class="form-field">
-            <label class="registration-label">
-              <span class="label-part">Телефон</span>
-              <input
-                class="registration-input"
-                type="tel"
-                name="tel"
-                required
-              />
-              <svg class="field-icon" width="18" height="18">
-                <use href="./img/sprite.svg#phone-black"></use>
-              </svg>
-            </label>
-          </div>
-          <div class="form-field">
-            <label class="registration-label">
-              <span class="label-part">Почта</span>
+			<!-- About -->
+			<section class="about section" id="about">
+				<div class="barber-gallery container">
+					<ul class="about-list list">
+						<li class="about-list__item">
+							<picture>
+								<source
+									srcset="./img/beard-330.jpg 1x, ./img/beard-330@2x.jpg 2x"
+									media="(min-width:768px) and (max-width:1199px)" />
+								<source
+									srcset="./img/beard-270.jpg 1x, ./img/beard-270@2x.jpg 2x"
+									media="(min-width:1200px)" />
+								<img
+									class="about-list__img"
+									src="./img/beard-330.jpg"
+									alt="барбер бреет бороду"
+									width="330" />
+							</picture>
+						</li>
+						<li class="about-list__item">
+							<picture>
+								<source
+									srcset="./img/shave-330.jpg 1x, ./img/shave-330@2x.jpg 2x"
+									media="(min-width:768px) and (max-width:1199px)" />
+								<source
+									srcset="./img/shave-270.jpg 1x, ./img/shave-270@2x.jpg 2x"
+									media="(min-width:1200px)" />
+								<img
+									class="about-list__img"
+									src="./img/shave-330.jpg"
+									alt="барбер бреет виски"
+									width="330" />
+							</picture>
+						</li>
+					</ul>
+					<div class="about-content">
+						<p class="about-content__text-top text-top text-top--dark">ABOUT</p>
+						<h2 class="about-content__title title title--dark">
+							The best barbershop in your city
+						</h2>
+						<p class="about-content__bottom-text bottom-text">
+							If you want to give more confidence to your image, you come to us.
+						</p>
+						<p class="about-content__text">
+							We are a team that never rests on its laurels and and is hungry
+							for change. And once you fall into the hands of our master, you'll
+							you can never be the same. We are a team that is always with
+							clients "on the same wavelength ". That's why we're always ready
+							to improve everyone who comes to us!
+						</p>
+						<button type="button" class="button button--dark" data-modal-open>
+							book online
+						</button>
+					</div>
+				</div>
+			</section>
 
-              <input
-                class="registration-input"
-                type="email"
-                name="email"
-                required
-              />
-              <svg class="field-icon" width="18" height="18">
-                <use href="./img/sprite.svg#email"></use>
-              </svg>
-            </label>
-          </div>
-          <div class="form-field-comment">
-            <label class="registration-label">
-              <span class="label-part">Комментарий</span>
-              <textarea
-                class="input-comment"
-                name="comment"
-                placeholder="Введите комментарий"
-              ></textarea>
-            </label>
-          </div>
-          <div class="form-field">
-            <label class="registration-label accord">
-              <input
-                class="registration-checkbox visually-hidden"
-                type="checkbox"
-                name="email"
-                required
-              />
-              <span class="checkbox-icon"></span>
-              <span class="accord-part"
-                >Я соглашаюсь с
-                <a href="#" class="accord-link"
-                  >Политикой использования данных</a
-                >
-              </span>
-            </label>
-          </div>
-          <button class="form-button btn" type="submit">Отправить</button>
-        </form>
-      </div>
-    </div>
+			<!-- Price -->
+			<section class="section price" id="price">
+				<div class="container price-container">
+					<p class="price-container__text-top text-top text-top--light">
+						Spend time in the company of the best craftsmen
+					</p>
+					<h2 class="price-title title title--light">Services and prices</h2>
+					<div class="price-content">
+						<ul class="price-list list price-list--light">
+							<li class="price-list__item">
+								<p class="price-list__text">Men's haircut</p>
+								<p class="price-list__text">from 400 uah</p>
+							</li>
+							<li class="price-list__item">
+								<p class="price-list__text">Beard trim</p>
+								<p class="price-list__text">from 250 uah</p>
+							</li>
+							<li class="price-list__item">
+								<p class="price-list__text">Mustache trim</p>
+								<p class="price-list__text">from 100 uah</p>
+							</li>
+							<li class="price-list__item">
+								<p class="price-list__text">Straight razor shave</p>
+								<p class="price-list__text">from 100 uah</p>
+							</li>
+						</ul>
+						<ul class="price-list list price-list--dark">
+							<li class="price-list__item">
+								<p class="price-list__text">Trainee haircut</p>
+								<p class="price-list__text">from 150 uah</p>
+							</li>
+							<li class="price-list__item">
+								<p class="price-list__text">Buzz cut</p>
+								<p class="price-list__text">from 250 uah</p>
+							</li>
+							<li class="price-list__item">
+								<p class="price-list__text">Kids haircut</p>
+								<p class="price-list__text">from 300 uah</p>
+							</li>
+							<li class="price-list__item">
+								<p class="price-list__text">Gray coverage</p>
+								<p class="price-list__text">from 200 uah</p>
+							</li>
+						</ul>
+					</div>
+					<button
+						type="button"
+						class="price-button button button--light"
+						data-modal-open>
+						book online
+					</button>
+				</div>
+			</section>
+			<!-- Advantages -->
+			<section class="section benefits-section">
+				<div class="benefits-container container">
+					<ul class="benefits-list list">
+						<li class="benefits-list__item">
+							<span class="benefits-list__part">600</span>
+							<p class="benefits-list__text">Happy clients daily</p>
+						</li>
+						<li class="benefits-list__item">
+							<span class="benefits-list__part">50</span>
+							<p class="benefits-list__text">Excellent service rewards</p>
+						</li>
+						<li class="benefits-list__item">
+							<span class="benefits-list__part">20</span>
+							<p class="benefits-list__text">Best masters of Kiev</p>
+						</li>
+						<li class="benefits-list__item">
+							<span class="benefits-list__part">100</span>
+							<p class="benefits-list__text">Gifts to loyal customers</p>
+						</li>
+					</ul>
+					<div class="benefits-content">
+						<p class="benefits-content__text-top text-top text-top--dark">
+							old traditional school
+						</p>
+						<h2 class="benefits-content__title title title--dark">
+							Why do people come to us?
+						</h2>
+						<p class="benefits-content__bottom-text">
+							О нас говорят только хорошее. Но лучше 1 раз увидеть и
+							прочувствовать, чем 10 раз прочитать.
+						</p>
+					</div>
+				</div>
+			</section>
+			<!-- Barbers -->
+			<section class="section masters-section" id="masters">
+				<div class="masters-container container">
+					<p class="masters-container__text-top text-top text-top--dark">
+						Customers say only good things about us. But it's better to see once
+						and feel than to read 10 times.
+					</p>
+					<h2 class="masters-container__title title title--dark">
+						Our barbers
+					</h2>
 
-    <script src="./js/modal.js"></script>
-  </body>
+					<ul class="masters-list list">
+						<li class="masters-list__item">
+							<picture>
+								<source
+									media="(min-width: 1200px )"
+									srcset="
+										./img/john-desktop.jpg    1x,
+										./img/john-desktop@2x.jpg 2x
+									" />
+								<source
+									media="(min-width: 768px )"
+									srcset="
+										./img/john-tablet.jpg    1x,
+										./img/john-tablet@2x.jpg 2x
+									" />
+								<source
+									media="(min-width: 320px )"
+									srcset="
+										./img/john-mobile.jpg    1x,
+										./img/john-mobile@2x.jpg 2x
+									" />
+
+								<img
+									class="masters-list__photo images"
+									src="./img/john-tablet.jpg"
+									alt="Джон"
+									width="450" />
+							</picture>
+
+							<div class="masters-content">
+								<h3 class="masters-content__title">John Smith</h3>
+								<p class="masters-content__text">Extreme Barber</p>
+								<ul class="masters-networks list">
+									<li class="masters-networks__item">
+										<a
+											href=""
+											class="masters-networks__link"
+											target="_blank"
+											rel="noopener nofollow noreferrer"
+											aria-label="Cсылка на Instagram">
+											<svg
+												class="masters-networks__icon"
+												width="20"
+												height="20">
+												<use href="./img/sprite.svg#instagram"></use>
+											</svg>
+										</a>
+									</li>
+									<li class="masters-networks__item">
+										<a
+											href=""
+											class="masters-networks__link"
+											target="_blank"
+											rel="noopener nofollow noreferrer"
+											aria-label="Cсылка на Twitter">
+											<svg
+												class="masters-networks__icon"
+												width="20"
+												height="20">
+												<use href="./img/sprite.svg#twitter"></use>
+											</svg>
+										</a>
+									</li>
+									<li class="masters-networks__item">
+										<a
+											href=""
+											class="masters-networks__link"
+											target="_blank"
+											rel="noopener nofollow noreferrer"
+											aria-label="Cсылка на Facebook">
+											<svg
+												class="masters-networks__icon"
+												width="20"
+												height="20">
+												<use href="./img/sprite.svg#facebook"></use>
+											</svg>
+										</a>
+									</li>
+									<li class="masters-networks__item">
+										<a
+											href=""
+											class="masters-networks__link"
+											target="_blank"
+											rel="noopener nofollow noreferrer"
+											aria-label="Cсылка на linkedin">
+											<svg
+												class="masters-networks__icon"
+												width="20"
+												height="20">
+												<use href="./img/sprite.svg#linkedin"></use>
+											</svg>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="masters-list__item">
+							<picture>
+								<source
+									media="(min-width: 1200px )"
+									srcset="
+										./img/michele-desktop.jpg    1x,
+										./img/michele-desktop@2x.jpg 2x
+									" />
+								<source
+									media="(min-width: 768px )"
+									srcset="
+										./img/michele-tablet.jpg    1x,
+										./img/michele-tablet@2x.jpg 2x
+									" />
+								<source
+									media="(min-width: 320px )"
+									srcset="
+										./img/michele-mobile.jpg    1x,
+										./img/michele-mobile@2x.jpg 2x
+									" />
+
+								<img
+									class="masters-list__photo images"
+									src="./img/michele-tablet.jpg"
+									alt="Майкл"
+									width="450" />
+							</picture>
+							<div class="masters-content">
+								<h3 class="masters-content__title">Michele Doe</h3>
+								<p class="masters-content__text">Extreme Barber</p>
+								<ul class="masters-networks list">
+									<li class="masters-networks__item">
+										<a
+											href=""
+											class="masters-networks__link"
+											target="_blank"
+											rel="noopener nofollow noreferrer"
+											aria-label="Cсылка на Instagram">
+											<svg
+												class="masters-networks__icon"
+												width="20"
+												height="20">
+												<use href="./img/sprite.svg#instagram"></use>
+											</svg>
+										</a>
+									</li>
+									<li class="masters-networks__item">
+										<a
+											href=""
+											class="masters-networks__link"
+											target="_blank"
+											rel="noopener nofollow noreferrer"
+											aria-label="Cсылка на Twitter">
+											<svg
+												class="masters-networks__icon"
+												width="20"
+												height="20">
+												<use href="./img/sprite.svg#twitter"></use>
+											</svg>
+										</a>
+									</li>
+									<li class="masters-networks__item">
+										<a
+											href=""
+											class="masters-networks__link"
+											target="_blank"
+											rel="noopener nofollow noreferrer"
+											aria-label="Cсылка на Facebook">
+											<svg
+												class="masters-networks__icon"
+												width="20"
+												height="20">
+												<use href="./img/sprite.svg#facebook"></use>
+											</svg>
+										</a>
+									</li>
+									<li class="masters-networks__item">
+										<a
+											href=""
+											class="masters-networks__link"
+											target="_blank"
+											rel="noopener nofollow noreferrer"
+											aria-label="Cсылка на linkedin">
+											<svg
+												class="masters-networks__icon"
+												width="20"
+												height="20">
+												<use href="./img/sprite.svg#linkedin"></use>
+											</svg>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="masters-list__item">
+							<picture>
+								<source
+									media="(min-width: 1200px )"
+									srcset="
+										./img/alan-desktop.jpg    1x,
+										./img/alan-desktop@2x.jpg 2x
+									" />
+								<source
+									media="(min-width: 768px )"
+									srcset="
+										./img/alan-tablet.jpg    1x,
+										./img/alan-tablet@2x.jpg 2x
+									" />
+								<source
+									media="(min-width: 320px )"
+									srcset="
+										./img/alan-mobile.jpg    1x,
+										./img/alan-mobile@2x.jpg 2x
+									" />
+								<img
+									class="masters-list__photo images"
+									src="./img/alan-tablet.jpg"
+									alt="Алан"
+									width="450" />
+							</picture>
+							<div class="masters-content">
+								<h3 class="masters-content__title">Alan Black</h3>
+								<p class="masters-content__text">Extreme Barber</p>
+								<ul class="masters-networks list">
+									<li class="masters-networks__item">
+										<a
+											href=""
+											class="masters-networks__link"
+											target="_blank"
+											rel="noopener nofollow noreferrer"
+											aria-label="Cсылка на Instagram">
+											<svg
+												class="masters-networks__icon"
+												width="20"
+												height="20">
+												<use href="./img/sprite.svg#instagram"></use>
+											</svg>
+										</a>
+									</li>
+									<li class="masters-networks__item">
+										<a
+											href=""
+											class="masters-networks__link"
+											target="_blank"
+											rel="noopener nofollow noreferrer"
+											aria-label="Cсылка на Twitter">
+											<svg
+												class="masters-networks__icon"
+												width="20"
+												height="20">
+												<use href="./img/sprite.svg#twitter"></use>
+											</svg>
+										</a>
+									</li>
+									<li class="masters-networks__item">
+										<a
+											href=""
+											class="masters-networks__link"
+											target="_blank"
+											rel="noopener nofollow noreferrer"
+											aria-label="Cсылка на Facebook">
+											<svg
+												class="masters-networks__icon"
+												width="20"
+												height="20">
+												<use href="./img/sprite.svg#facebook"></use>
+											</svg>
+										</a>
+									</li>
+									<li class="masters-networks__item">
+										<a
+											href=""
+											class="masters-networks__link"
+											target="_blank"
+											rel="noopener nofollow noreferrer"
+											aria-label="Cсылка на linkedin">
+											<svg
+												class="masters-networks__icon"
+												width="20"
+												height="20">
+												<use href="./img/sprite.svg#linkedin"></use>
+											</svg>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<!-- Works -->
+			<section class="section works-section">
+				<div class="works-container container">
+					<h2 class="visually-hidden">Our works</h2>
+					<p class="works-container__text text-top text-top--dark">
+						In Latin, "barba" means "beard.
+					</p>
+					<ul class="works-list list">
+						<li class="works-list__item">
+							<picture>
+								<source
+									media="(min-width: 1200px )"
+									srcset="
+										./img/work-1-270.jpg    1x,
+										./img/work-1-270@2x.jpg 2x
+									" />
+								<source
+									media="(min-width: 768px )"
+									srcset="
+										./img/work-1-330.jpg    1x,
+										./img/work-1-330@2x.jpg 2x
+									" />
+								<source
+									media="(min-width: 320px )"
+									srcset="
+										./img/work-1-418.jpg    1x,
+										./img/work-1-418@2x.jpg 2x
+									" />
+								<img
+									class="works-list__photo images"
+									src="./img/work-1-418.jpg"
+									alt="барбер стрижет"
+									width="418" />
+							</picture>
+						</li>
+						<li class="works-list__item">
+							<picture
+								><source
+									media="(min-width: 1200px )"
+									srcset="
+										./img/work-2-270.jpg    1x,
+										./img/work-2-270@2x.jpg 2x
+									" />
+								<source
+									media="(min-width: 768px )"
+									srcset="
+										./img/work-2-330.jpg    1x,
+										./img/work-2-330@2x.jpg 2x
+									" />
+								<source
+									media="(min-width: 320px )"
+									srcset="
+										./img/work-2-418.jpg    1x,
+										./img/work-2-418@2x.jpg 2x
+									" />
+								<img
+									class="works-list__photo images"
+									src="./img/work-2-418.jpg"
+									alt="барбер бреет"
+									width="418" />
+							</picture>
+						</li>
+						<li class="works-list__item">
+							<picture
+								><source
+									media="(min-width: 1200px )"
+									srcset="
+										./img/work-3-270.jpg    1x,
+										./img/work-3-270@2x.jpg 2x
+									" />
+								<source
+									media="(min-width: 768px )"
+									srcset="
+										./img/work-3-330.jpg    1x,
+										./img/work-3-330@2x.jpg 2x
+									" />
+								<source
+									media="(min-width: 320px )"
+									srcset="
+										./img/work-3-418.jpg    1x,
+										./img/work-3-418@2x.jpg 2x
+									" />
+								<img
+									class="works-list__photo images"
+									src="./img/work-3-418.jpg"
+									alt="барбер отпаривает"
+									width="418" />
+							</picture>
+						</li>
+						<li class="works-list__item">
+							<picture
+								><source
+									media="(min-width: 1200px )"
+									srcset="
+										./img/work-4-270.jpg    1x,
+										./img/work-4-270@2x.jpg 2x
+									" />
+								<source
+									media="(min-width: 768px )"
+									srcset="
+										./img/work-4-330.jpg    1x,
+										./img/work-4-330@2x.jpg 2x
+									" />
+								<source
+									media="(min-width: 320px )"
+									srcset="
+										./img/work-4-418.jpg    1x,
+										./img/work-4-418@2x.jpg 2x
+									" />
+								<img
+									class="works-list__photo images"
+									src="./img/work-4-418.jpg"
+									alt="барбер подбривает"
+									width="418" />
+							</picture>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<!-- Entry form -->
+			<div class="contact-wrap">
+				<div class="contact-wrap-container">
+					<section class="online-section">
+						<div class="online-container">
+							<h2 class="online-title title title--light">Book online</h2>
+							<form class="online-form" autocomplete="off">
+								<div class="online-form-field">
+									<label class="online-form-field__label">
+										<input
+											class="online-form-field__input"
+											type="text"
+											name="name"
+											placeholder=" "
+											required />
+										<span class="online-form-field__text">Name*</span>
+									</label>
+								</div>
+								<div class="online-form-field">
+									<label class="online-form-field__label">
+										<input
+											class="online-form-field__input"
+											type="tel"
+											name="tel"
+											placeholder=" "
+											required />
+										<span class="online-form-field__text">Pnone*</span>
+									</label>
+								</div>
+								<div class="text-field">
+									<label class="text-field__label">
+										<textarea
+											class="text-field__input"
+											name="message"
+											placeholder=" "></textarea>
+										<span class="text-field__text">Message</span>
+									</label>
+								</div>
+							</form>
+							<button type="submit" class="online-button button button--light">
+								submit
+							</button>
+						</div>
+					</section>
+					<!-- Contacts -->
+					<section class="contacts-section" id="contacts">
+						<div class="contacts-container">
+							<h2 class="contacts-title title title--light">Contacts</h2>
+							<address class="contacts-adress">
+								<ul class="contacts-list list">
+									<li class="contacts-list__item">
+										<a
+											class="contacts-list__link map"
+											href="https://goo.gl/maps/7j71h9MgPoRKZNbf8">
+											<svg width="24" height="24" class="contacts-icon">
+												<use href="./img/sprite.svg#map-pin"></use>
+											</svg>
+											Vasylkivska ST. 7A
+											<br />
+											Kyiv, 08132</a
+										>
+									</li>
+									<li class="contacts-list__item">
+										<a class="contacts-list__link tel" href="tel:+380441111111">
+											<svg width="24" height="24" class="contacts-icon">
+												<use href="./img/sprite.svg#phone"></use>
+											</svg>
+											+38 044 111 11 11
+										</a>
+									</li>
+									<li class="contacts-list__item">
+										<a
+											class="contacts-list__link mail"
+											href="mailto:barbershop@email.com">
+											<svg width="24" height="24" class="contacts-icon">
+												<use href="./img/sprite.svg#mail"></use>
+											</svg>
+											barbershop@email.com
+										</a>
+									</li>
+								</ul>
+								<div class="contacts-time">
+									<p class="contacts-subtitle text-top text-top--light">
+										Operating time:
+									</p>
+									<p class="contacts-time">Daily 09:00 - 22:00</p>
+								</div>
+							</address>
+						</div>
+					</section>
+				</div>
+			</div>
+		</main>
+		<!-- Footer -->
+		<footer class="footer">
+			<div class="footer-container container">
+				<p class="footer-text">&copy; Copyright 2020</p>
+				<ul class="networks footer-list list">
+					<li class="networks__item">
+						<a
+							class="networks__link"
+							href=""
+							target="_blank"
+							rel=" noopener nofollow noreferrer"
+							>Instagram</a
+						>
+					</li>
+					<li class="networks__item">
+						<a
+							class="networks__link"
+							href=""
+							target="_blank"
+							rel=" noopener nofollow noreferrer"
+							>Youtube</a
+						>
+					</li>
+				</ul>
+			</div>
+		</footer>
+		<a href="#hero" class="scroll-top"
+			><svg class="scroll-top__icon" width="30" height="30">
+				<use href="./img/sprite.svg#top"></use>
+			</svg>
+		</a>
+		<!-- Modal window -->
+		<div class="backdrop is-hidden" data-modal>
+			<div class="modal-content">
+				<button class="modal-content__button" type="button" data-modal-close>
+					<svg class="modal-content__icon" width="18" height="18">
+						<use href="./img/sprite.svg#close"></use>
+					</svg>
+				</button>
+				<p class="modal-content__text">Leave a service request</p>
+
+				<form class="form" autocomplete="off">
+					<div class="form-field">
+						<label class="form-field__label">
+							<span class="form-field__part">Name</span>
+
+							<input
+								class="form-field__input"
+								type="text"
+								name="name"
+								required />
+							<svg class="form-field__icon" width="18" height="18">
+								<use href="./img/sprite.svg#person"></use>
+							</svg>
+						</label>
+					</div>
+					<div class="form-field">
+						<label class="form-field__label">
+							<span class="form-field__part">Phone</span>
+							<input class="form-field__input" type="tel" name="tel" required />
+							<svg class="form-field__icon" width="18" height="18">
+								<use href="./img/sprite.svg#phone-black"></use>
+							</svg>
+						</label>
+					</div>
+					<div class="form-field">
+						<label class="form-field__label">
+							<span class="form-field__part">Email</span>
+
+							<input
+								class="form-field__input"
+								type="email"
+								name="email"
+								required />
+							<svg class="form-field__icon" width="18" height="18">
+								<use href="./img/sprite.svg#email"></use>
+							</svg>
+						</label>
+					</div>
+					<div class="field-comment">
+						<label class="field-comment__label">
+							<span class="field-comment__part">Сomment</span>
+							<textarea
+								class="field-comment__input"
+								name="comment"
+								placeholder="Enter your comment"></textarea>
+						</label>
+					</div>
+					<div class="form-field-accord">
+						<label class="feedback__accord">
+							<input
+								class="form__checkbox visually-hidden"
+								type="checkbox"
+								name="accord" />
+							<span class="feedback__field"></span>
+							<span class="feedback__consent"
+								>I agree to the newsletter and accept the
+								<a href="#" class="feedback__link"> Terms of Agreement</a></span
+							>
+						</label>
+					</div>
+					<button class="form-button button button--dark" type="submit">
+						Submit
+					</button>
+				</form>
+			</div>
+		</div>
+		<script
+			defer
+			src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+			integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+			crossorigin="anonymous"></script>
+		<script src="./js/modal.js"></script>
+		<script src="./js/menu.js"></script>
+		<script src="./js/scroll.js"></script>
+	</body>
 </html>
